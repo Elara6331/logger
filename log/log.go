@@ -1,7 +1,7 @@
 package log
 
 import (
-	"logger"
+	"go.arsenm.dev/logger"
 	"os"
 )
 

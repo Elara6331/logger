@@ -32,3 +32,36 @@ BenchmarkPretty/all-8                     285554              3726 ns/op        
 ```
 
 To run the benchmarks yourself, simply clone this repo and run `go test -bench=.`. Keep in mind that they will be different, depending on what your computer's specs are.
+
+### Example
+
+```go
+package main
+
+import (
+    "strconv"
+    "os"
+
+    "go.arsenm.dev/logger/log"
+    "go.arsenm.dev/logger"
+)
+
+func init() {
+    // Default logger is JSONLogger going to stderr
+    log.Logger = logger.NewPretty(os.Stdout)
+}
+
+func main() {
+    s := "hello"
+    i, err := strconv.Atoi(s)
+    if err != nil {
+        log.Error("Couldn't convert to integer").
+            Str("input", s).
+            Err(err).
+            Send()
+    }
+    log.Info("Converted to integer").
+        Int("output", i).
+        Send()
+}
+```
