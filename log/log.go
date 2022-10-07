@@ -56,3 +56,13 @@ func Error(msg string) logger.LogBuilder {
 func Errorf(format string, v ...any) logger.LogBuilder {
 	return Logger.Errorf(format, v...)
 }
+
+// Fatal creates a new fatal event with the given message
+func Fatal(msg string) logger.LogBuilder {
+	return Logger.Fatal(msg)
+}
+
+// Fatalf creates a new fatal event with the formatted message
+func Fatalf(format string, v ...any) logger.LogBuilder {
+	return Logger.Fatalf(format, v...)
+}
