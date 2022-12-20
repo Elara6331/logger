@@ -33,7 +33,7 @@ type CLILogger struct {
 	PanicColor color.Color
 }
 
-func NewCLILogger(out io.Writer) *CLILogger {
+func NewCLI(out io.Writer) *CLILogger {
 	useColor := false
 	if f, ok := out.(*os.File); ok {
 		useColor = isatty.IsTerminal(f.Fd())
