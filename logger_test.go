@@ -4,11 +4,12 @@ import (
 	"bytes"
 	"encoding/json"
 	"errors"
-	"logger"
 	"os"
 	"runtime"
 	"testing"
 	"time"
+
+	"go.arsenm.dev/logger"
 )
 
 var buf = &bytes.Buffer{}
