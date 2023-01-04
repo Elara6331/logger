@@ -34,6 +34,13 @@ func (ml *MultiLogger) NoPanic() {
 	ml.noPanic = true
 }
 
+// SetLevel sets the log level of the logger
+func (ml *MultiLogger) SetLevel(l LogLevel) {
+	for _, logger := range ml.Loggers {
+		logger.SetLevel(l)
+	}
+}
+
 // Debug creates a new debug event with the given message
 func (ml *MultiLogger) Debug(msg string) LogBuilder {
 	lbs := make([]LogBuilder, len(ml.Loggers))

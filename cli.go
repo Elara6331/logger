@@ -14,6 +14,8 @@ import (
 	"github.com/mattn/go-isatty"
 )
 
+var _ Logger = (*CLILogger)(nil)
+
 type CLILogger struct {
 	Out      io.Writer
 	Level    LogLevel
@@ -64,6 +66,11 @@ func (pl *CLILogger) NoPanic() {
 // NoExit prevents the logger from exiting on fatal events
 func (pl *CLILogger) NoExit() {
 	pl.noExit = true
+}
+
+// SetLevel sets the log level of the logger
+func (pl *CLILogger) SetLevel(l LogLevel) {
+	pl.Level = l
 }
 
 // Debug creates a new debug event with the given message

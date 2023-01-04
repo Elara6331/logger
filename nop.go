@@ -21,6 +21,9 @@ func (nl NopLogger) NoPanic() {}
 // NoExit prevents the logger from exiting on fatal events
 func (nl NopLogger) NoExit() {}
 
+// SetLevel sets the log level of the logger
+func (nl NopLogger) SetLevel(LogLevel) {}
+
 // Debug creates a new debug event with the given message
 func (nl NopLogger) Debug(msg string) LogBuilder {
 	return NopLogBuilder{}

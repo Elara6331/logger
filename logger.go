@@ -1,8 +1,8 @@
 package logger
 
 import (
-	"fmt"
 	"errors"
+	"fmt"
 	"strings"
 )
 
@@ -50,6 +50,9 @@ type Logger interface {
 
 	// NoExit prevents the logger from exiting on fatal events
 	NoExit()
+
+	// SetLevel sets the log level of the logger
+	SetLevel(LogLevel)
 
 	// Debug creates a new debug event with the given message
 	Debug(string) LogBuilder

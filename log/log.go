@@ -1,8 +1,9 @@
 package log
 
 import (
-	"go.arsenm.dev/logger"
 	"os"
+
+	"go.arsenm.dev/logger"
 )
 
 var Logger logger.Logger = logger.NewJSON(os.Stderr)
@@ -15,6 +16,11 @@ func NoPanic() {
 // NoExit prevents the logger from exiting on fatal events
 func NoExit() {
 	Logger.NoExit()
+}
+
+// SetLevel sets the log level of the logger
+func SetLevel(l logger.LogLevel) {
+	Logger.SetLevel(l)
 }
 
 // Debug creates a new debug event with the given message

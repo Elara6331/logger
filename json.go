@@ -40,6 +40,11 @@ func (jl *JSONLogger) NoExit() {
 	jl.noExit = true
 }
 
+// SetLevel sets the log level of the logger
+func (jl *JSONLogger) SetLevel(l LogLevel) {
+	jl.Level = l
+}
+
 // Debug creates a new debug event with the given message
 func (jl *JSONLogger) Debug(msg string) LogBuilder {
 	return newJSONLogBuilder(jl, msg, LogLevelDebug)

@@ -81,6 +81,11 @@ func (pl *PrettyLogger) NoExit() {
 	pl.noExit = true
 }
 
+// SetLevel sets the log level of the logger
+func (pl *PrettyLogger) SetLevel(l LogLevel) {
+	pl.Level = l
+}
+
 // Debug creates a new debug event with the given message
 func (pl *PrettyLogger) Debug(msg string) LogBuilder {
 	return newPrettyLogBuilder(pl, msg, LogLevelDebug)
