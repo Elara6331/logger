@@ -2,6 +2,8 @@ package logger
 
 import (
 	"fmt"
+	"errors"
+	"strings"
 )
 
 // LogLevel represents a log level
@@ -24,6 +26,21 @@ var logLevelNames = [...]string{
 	LogLevelError: "error",
 	LogLevelFatal: "fatal",
 	LogLevelPanic: "panic",
+}
+
+// ErrNoSuchLevel is returned when ParseLogLevel cannot find
+// a log level corresponding to the provided string
+var ErrNoSuchLevel = errors.New("no such log level")
+
+// ParseLogLevel parses a string representing a log level
+// and returns the proper log level
+func ParseLogLevel(s string) (LogLevel, error) {
+	for lvl, name := range logLevelNames {
+		if strings.EqualFold(name, s) {
+			return LogLevel(lvl), nil
+		}
+	}
+	return 254, ErrNoSuchLevel
 }
 
 // Logger represents a logger
