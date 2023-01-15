@@ -1,0 +1,8 @@
+go 1.19
+
+use (
+    .
+    ./adapters/zap
+    ./adapters/zerolog
+    ./adapters/logrus
+)

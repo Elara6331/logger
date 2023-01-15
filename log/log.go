@@ -72,3 +72,13 @@ func Fatal(msg string) logger.LogBuilder {
 func Fatalf(format string, v ...any) logger.LogBuilder {
 	return Logger.Fatalf(format, v...)
 }
+
+// Fatal creates a new fatal event with the given message
+func Panic(msg string) logger.LogBuilder {
+	return Logger.Panic(msg)
+}
+
+// Fatalf creates a new fatal event with the formatted message
+func Panicf(format string, v ...any) logger.LogBuilder {
+	return Logger.Panicf(format, v...)
+}
