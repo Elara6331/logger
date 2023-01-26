@@ -49,9 +49,9 @@ func NewCLI(out io.Writer) *CLILogger {
 		MsgColor: color.Normal,
 		KeyColor: color.FgCyan,
 
-		DebugColor: color.FgYellow,
+		DebugColor: color.FgMagenta,
 		InfoColor:  color.FgGreen,
-		WarnColor:  color.FgRed,
+		WarnColor:  color.FgYellow,
 		ErrColor:   color.FgLightRed,
 		FatalColor: color.FgRed.Darken(),
 		PanicColor: color.FgRed.Darken(),
