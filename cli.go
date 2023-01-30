@@ -16,6 +16,9 @@ import (
 
 var _ Logger = (*CLILogger)(nil)
 
+// CLILogger is a logger meant to be used for CLI tools
+// where users will view and read the logs throughout the
+// application's execution
 type CLILogger struct {
 	Out      io.Writer
 	Level    LogLevel
@@ -35,6 +38,7 @@ type CLILogger struct {
 	PanicColor color.Color
 }
 
+// NewCLI creates and returns a new CLILogger
 func NewCLI(out io.Writer) *CLILogger {
 	useColor := false
 	if f, ok := out.(*os.File); ok {
