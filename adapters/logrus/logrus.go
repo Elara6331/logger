@@ -8,8 +8,10 @@ import (
 	"go.arsenm.dev/logger"
 )
 
-var _ logger.Logger = &LogrusLogger{}
-var _ logger.LogBuilder = &LogrusLogBuilder{}
+var (
+	_ logger.Logger     = &LogrusLogger{}
+	_ logger.LogBuilder = &LogrusLogBuilder{}
+)
 
 type LogrusLogger struct {
 	logger *logrus.Logger

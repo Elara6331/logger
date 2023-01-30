@@ -8,8 +8,10 @@ import (
 	"go.arsenm.dev/logger"
 )
 
-var _ logger.Logger = &ZerologLogger{}
-var _ logger.LogBuilder = &ZerologLogBuilder{}
+var (
+	_ logger.Logger     = &ZerologLogger{}
+	_ logger.LogBuilder = &ZerologLogBuilder{}
+)
 
 type ZerologLogger struct {
 	logger zerolog.Logger

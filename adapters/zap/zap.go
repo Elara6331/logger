@@ -9,8 +9,10 @@ import (
 	"go.uber.org/zap/zapcore"
 )
 
-var _ logger.Logger = &ZapLogger{}
-var _ logger.LogBuilder = &ZapLogBuilder{}
+var (
+	_ logger.Logger     = &ZapLogger{}
+	_ logger.LogBuilder = &ZapLogBuilder{}
+)
 
 type ZapLogger struct {
 	Logger *zap.Logger

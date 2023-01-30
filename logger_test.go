@@ -12,9 +12,11 @@ import (
 	"go.arsenm.dev/logger"
 )
 
-var buf = &bytes.Buffer{}
-var jsonlog = logger.NewJSON(buf)
-var prettylog = logger.NewPretty(buf)
+var (
+	buf       = &bytes.Buffer{}
+	jsonlog   = logger.NewJSON(buf)
+	prettylog = logger.NewPretty(buf)
+)
 
 func TestJSON(t *testing.T) {
 	t.Run("empty", func(t *testing.T) {
