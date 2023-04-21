@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/rs/zerolog"
-	"go.arsenm.dev/logger"
+	"go.elara.ws/logger"
 )
 
 var (

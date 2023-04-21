@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/sirupsen/logrus"
-	"go.arsenm.dev/logger"
+	"go.elara.ws/logger"
 )
 
 var (

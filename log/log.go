@@ -3,7 +3,7 @@ package log
 import (
 	"os"
 
-	"go.arsenm.dev/logger"
+	"go.elara.ws/logger"
 )
 
 var Logger logger.Logger = logger.NewJSON(os.Stderr)

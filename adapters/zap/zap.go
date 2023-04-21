@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"go.arsenm.dev/logger"
+	"go.elara.ws/logger"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )

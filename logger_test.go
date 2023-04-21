@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"go.arsenm.dev/logger"
+	"go.elara.ws/logger"
 )
 
 var (
