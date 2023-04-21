@@ -1,4 +1,4 @@
-module go.arsenm.dev/logger
+module go.elara.ws/logger
 
 go 1.18
 
