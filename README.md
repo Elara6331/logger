@@ -1,3 +1,6 @@
+> **Warning**: \
+> This library has been archived. Please use the new [loggers](https://pkg.go.dev/go.elara.ws/loggers) package with Go's [log/slog](https://pkg.go.dev/log/slog) interface.
+
 # Logger
 
 Logger is a simple and fast logger that can write both machine-readable and human-readable logs.
@@ -34,8 +37,8 @@ import (
     "strconv"
     "os"
 
-    "go.arsenm.dev/logger/log"
-    "go.arsenm.dev/logger"
+    "go.elara.ws/logger/log"
+    "go.elara.ws/logger"
 )
 
 func init() {
